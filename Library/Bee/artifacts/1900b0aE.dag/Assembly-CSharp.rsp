@@ -372,9 +372,13 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/BossAttack.cs"
+"Assets/BossLife.cs"
 "Assets/BossMove.cs"
 "Assets/Break.cs"
+"Assets/FlameGenerator.cs"
+"Assets/FlameMove.cs"
 "Assets/PlayerMove.cs"
+"Assets/Var.cs"
 -langversion:9.0
 
 /deterministic

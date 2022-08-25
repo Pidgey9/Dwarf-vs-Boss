@@ -18,7 +18,6 @@ public class PlayerMove : MonoBehaviour
     {
         animator = model.GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        animator.SetBool("Dead", false);
     }
     private void Update()
     {
@@ -28,7 +27,7 @@ public class PlayerMove : MonoBehaviour
         animator.SetBool("Attack", false);
         if (Input.GetKey(KeyCode.Z))
         {
-            animator.SetBool("Attack", true);
+            animator.SetTrigger("Attack");
             axeColliderH.SetActive(true);
             axeColliderR.SetActive(true);
             axeColliderL.SetActive(true);
@@ -41,11 +40,11 @@ public class PlayerMove : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.S))
         {
-            animator.SetBool("Dead", true);
+            animator.SetTrigger("Dead");
         }
         if (Input.GetKey(KeyCode.Backspace))
         {
-            animator.SetBool("Resurrect", true);
+            animator.SetTrigger("Resurrect");
         }
     }
     private void FixedUpdate()
@@ -54,12 +53,11 @@ public class PlayerMove : MonoBehaviour
         if (rb.velocity.y == 0 && Input.GetKey(KeyCode.Space))
         {
             rb.AddForce(Vector2.up * jumpforce);
-            animator.SetInteger("Jump", 10);
+            animator.SetTrigger("Jump");
         }
         if (rb.velocity.y < -5)
         {
             animator.SetBool("Grounded", false);
-            animator.SetInteger("Jump", 0);
         }
         if (rb.velocity.y == 0)
         {
@@ -67,7 +65,7 @@ public class PlayerMove : MonoBehaviour
         }
         if ((rb.velocity.y < -15 && rb.velocity.y > -16) || rb.velocity.y < -100)
         {
-            animator.SetBool("Dead", true);
+            animator.SetTrigger("Dead");
         }
     }
 
