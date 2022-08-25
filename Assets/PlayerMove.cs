@@ -10,6 +10,10 @@ public class PlayerMove : MonoBehaviour
     Animator animator;
     Rigidbody2D rb;
     public int jumpforce;
+    public GameObject axeColliderH;
+    public GameObject axeColliderR;
+    public GameObject axeColliderL;
+
     private void Awake()
     {
         animator = model.GetComponent<Animator>();
@@ -20,11 +24,20 @@ public class PlayerMove : MonoBehaviour
     {
         h = Input.GetAxis("Horizontal");
         transform.position += new Vector3(h, 0, 0) * speed;
-        animator.SetFloat("x", h);
+        animator.SetFloat("x", Mathf.Abs(h));
         animator.SetBool("Attack", false);
         if (Input.GetKey(KeyCode.Z))
         {
             animator.SetBool("Attack", true);
+            axeColliderH.SetActive(true);
+            axeColliderR.SetActive(true);
+            axeColliderL.SetActive(true);
+        }
+        else if (rb.velocity.y == 0)
+        {
+            axeColliderH.SetActive(false);
+            axeColliderR.SetActive(false);
+            axeColliderL.SetActive(false);
         }
         if (Input.GetKey(KeyCode.S))
         {
@@ -32,7 +45,7 @@ public class PlayerMove : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Backspace))
         {
-            animator.SetBool("Dead", false);
+            animator.SetBool("Resurrect", true);
         }
     }
     private void FixedUpdate()
@@ -51,6 +64,10 @@ public class PlayerMove : MonoBehaviour
         if (rb.velocity.y == 0)
         {
             animator.SetBool("Grounded", true);
+        }
+        if ((rb.velocity.y < -15 && rb.velocity.y > -16) || rb.velocity.y < -100)
+        {
+            animator.SetBool("Dead", true);
         }
     }
 

@@ -9,8 +9,8 @@ public class BossMove : MonoBehaviour
     public float speed;
     private void Update()
     {
-        rand = (Random.value - 0.5f);
-        rand2 = (Random.value - 0.5f) * 0.1f;
+        rand = (Random.value - 0.6f);
+        rand2 = Random.value * 0.1f;
         transform.position += new Vector3(rand * speed, rand, 0);
     }
 }

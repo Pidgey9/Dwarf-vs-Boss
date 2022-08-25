@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{545A6036-E459-009C-C913-F9DEC2BC2008}</ProjectGuid>
+    <ProjectGuid>{4A1CE4CB-2D6B-ED8C-2D10-7EDB6C0C1DF6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -57,8 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\PlayerMove.cs" />
-    <Compile Include="Assets\Break.cs" />
     <Compile Include="Assets\BossMove.cs" />
+    <Compile Include="Assets\Break.cs" />
+    <Compile Include="Assets\BossAttack.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
