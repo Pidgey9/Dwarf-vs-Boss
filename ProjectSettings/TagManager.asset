@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - CageL
   - CageR
+  - Ladder
   layers:
   - Default
   - TransparentFX

@@ -265,6 +265,7 @@ GameObject:
   - component: {fileID: 331715321288283563}
   - component: {fileID: 331715321288283558}
   - component: {fileID: 3874919886104773299}
+  - component: {fileID: 6348363794184536358}
   - component: {fileID: 8265123474187975418}
   m_Layer: 0
   m_Name: Boss
@@ -368,6 +369,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossLife: {fileID: 11400000, guid: 0a3a911b311a60546a6b711da59e6316, type: 2}
+  animator: {fileID: 6348363794184536358}
+--- !u!95 &6348363794184536358
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331715321288283559}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1eced1a3c6661bb428dd7bc518f55cbf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!82 &8265123474187975418
 AudioSource:
   m_ObjectHideFlags: 0

@@ -377,6 +377,7 @@
 "Assets/Break.cs"
 "Assets/FlameGenerator.cs"
 "Assets/FlameMove.cs"
+"Assets/LadderUp.cs"
 "Assets/PlayerMove.cs"
 "Assets/Var.cs"
 -langversion:9.0

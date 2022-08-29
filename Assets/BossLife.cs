@@ -5,6 +5,7 @@ using UnityEngine;
 public class BossLife : MonoBehaviour
 {
     public Var bossLife;
+    public Animator animator;
     private void Start()
     {
         bossLife.value = 10;
@@ -14,6 +15,8 @@ public class BossLife : MonoBehaviour
         if (collision.collider.CompareTag("Axe"))
         {
             bossLife.value--;
+            animator.SetTrigger("Take Damage");
+            
         }
     }
     private void Update()
@@ -21,6 +24,10 @@ public class BossLife : MonoBehaviour
         if (bossLife.value <= 0)
         {
             Destroy(gameObject);
+        }
+        if (bossLife.value < 5)
+        {
+            animator.SetTrigger("MidLife");
         }
     }
 }
