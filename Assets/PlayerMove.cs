@@ -13,6 +13,7 @@ public class PlayerMove : MonoBehaviour
     public GameObject axeColliderH;
     public GameObject axeColliderR;
     public GameObject axeColliderL;
+    public GameObject mobilePlatform;
 
     private void Awake()
     {
@@ -22,7 +23,7 @@ public class PlayerMove : MonoBehaviour
     private void Update()
     {
         h = Input.GetAxis("Horizontal");
-        transform.position += new Vector3(h, 0, 0) * speed;
+        transform.position += new Vector3(h, 0, 0) * speed * Time.deltaTime;
         animator.SetFloat("x", Mathf.Abs(h));
         animator.SetBool("Attack", false);
         if (Input.GetKey(KeyCode.Z))
@@ -38,10 +39,10 @@ public class PlayerMove : MonoBehaviour
             axeColliderR.SetActive(false);
             axeColliderL.SetActive(false);
         }
-        if (Input.GetKey(KeyCode.S))
+        /*if (Input.GetKey(KeyCode.S))
         {
             animator.SetTrigger("Dead");
-        }
+        }*/
         if (Input.GetKey(KeyCode.Backspace))
         {
             animator.SetTrigger("Resurrect");
@@ -49,10 +50,9 @@ public class PlayerMove : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        //rb.velocity += new Vector2(h, 0) * speed;
-        if (rb.velocity.y == 0 && Input.GetKey(KeyCode.Space))
+        if ((rb.velocity.y == 0 && Input.GetKey(KeyCode.Space)) || (rb.velocity.y == 0 && Input.GetKey(KeyCode.S)))
         {
-            rb.AddForce(Vector2.up * jumpforce);
+            rb.AddForce(Vector2.up * jumpforce * Time.fixedDeltaTime);
             animator.SetTrigger("Jump");
         }
         if (rb.velocity.y < -5)
@@ -63,9 +63,27 @@ public class PlayerMove : MonoBehaviour
         {
             animator.SetBool("Grounded", true);
         }
-        if ((rb.velocity.y < -15 && rb.velocity.y > -16) || rb.velocity.y < -100)
+        if (rb.velocity.y < -100)
         {
             animator.SetTrigger("Dead");
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Mobile"))
+        {
+            transform.SetParent(mobilePlatform.transform);
+        }
+        else
+        {
+            transform.SetParent(null);
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Mobile"))
+        {
+            transform.SetParent(null);
         }
     }
 

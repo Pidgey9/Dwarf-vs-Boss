@@ -375,10 +375,12 @@
 "Assets/BossLife.cs"
 "Assets/BossMove.cs"
 "Assets/Break.cs"
+"Assets/EndGate.cs"
 "Assets/FlameGenerator.cs"
 "Assets/FlameMove.cs"
 "Assets/LadderUp.cs"
 "Assets/PlayerMove.cs"
+"Assets/TriggerHitbox.cs"
 "Assets/Var.cs"
 -langversion:9.0
 

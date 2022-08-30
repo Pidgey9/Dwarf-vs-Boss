@@ -9,6 +9,9 @@ TagManager:
   - CageL
   - CageR
   - Ladder
+  - Mobile
+  - Hitbox
+  - End
   layers:
   - Default
   - TransparentFX

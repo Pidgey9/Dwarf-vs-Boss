@@ -63,8 +63,10 @@
     <Compile Include="Assets\FlameGenerator.cs" />
     <Compile Include="Assets\Var.cs" />
     <Compile Include="Assets\BossMove.cs" />
-    <Compile Include="Assets\Break.cs" />
     <Compile Include="Assets\LadderUp.cs" />
+    <Compile Include="Assets\Break.cs" />
+    <Compile Include="Assets\TriggerHitbox.cs" />
+    <Compile Include="Assets\EndGate.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

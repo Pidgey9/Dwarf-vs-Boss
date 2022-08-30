@@ -6,28 +6,23 @@ public class BossLife : MonoBehaviour
 {
     public Var bossLife;
     public Animator animator;
+    public GameObject mobilePlatform;
+    public GameObject spawnFlame;
     private void Start()
     {
         bossLife.value = 10;
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.CompareTag("Axe"))
-        {
-            bossLife.value--;
-            animator.SetTrigger("Take Damage");
-            
-        }
     }
     private void Update()
     {
         if (bossLife.value <= 0)
         {
+            mobilePlatform.SetActive(true);
             Destroy(gameObject);
         }
         if (bossLife.value < 5)
         {
             animator.SetTrigger("MidLife");
+            spawnFlame.SetActive(true);
         }
     }
 }
