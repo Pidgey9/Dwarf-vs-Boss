@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndGate : MonoBehaviour
 {
@@ -15,7 +16,11 @@ public class EndGate : MonoBehaviour
         }
         if (collision.CompareTag("Beer"))
         {
-            
+            SceneManager.LoadScene(0);
+        }
+        if (collision.CompareTag("Mutton"))
+        {
+            gameObject.SetActive(false);
         }
     }
 }
