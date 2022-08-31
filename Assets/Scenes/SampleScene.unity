@@ -2719,6 +2719,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2356453320098418083, guid: edf648fe7fabcde4f8c104e12d8e2a87, type: 3}
+      propertyPath: count
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 3874919886104773299, guid: edf648fe7fabcde4f8c104e12d8e2a87, type: 3}
       propertyPath: spawnFlame
       value: 

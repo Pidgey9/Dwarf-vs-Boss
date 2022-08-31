@@ -13,5 +13,9 @@ public class EndGate : MonoBehaviour
             startGate.SetActive(false);
             endGate.SetActive(true);
         }
+        if (collision.CompareTag("Beer"))
+        {
+            
+        }
     }
 }

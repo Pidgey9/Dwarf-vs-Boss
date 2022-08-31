@@ -716,7 +716,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1545672461777074458}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 0.96, z: 0}
+  m_LocalPosition: {x: -2.42, y: -2.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -736,6 +736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Flame: {fileID: 2531195283595818388, guid: 9fa1bda015f59844bb8bb63e699bbc0e, type: 3}
+  count: 0
 --- !u!1 &9074729362417366078
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,7 +762,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9074729362417366078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 28, z: 0}
+  m_LocalPosition: {x: -2.2, y: 2.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -781,3 +782,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Flame: {fileID: 2531195283595818388, guid: 9fa1bda015f59844bb8bb63e699bbc0e, type: 3}
+  count: 500

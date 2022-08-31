@@ -12,6 +12,8 @@ TagManager:
   - Mobile
   - Hitbox
   - End
+  - Jump
+  - Floor
   layers:
   - Default
   - TransparentFX
