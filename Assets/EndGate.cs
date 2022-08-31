@@ -16,7 +16,7 @@ public class EndGate : MonoBehaviour
         }
         if (collision.CompareTag("Beer"))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
         if (collision.CompareTag("Mutton"))
         {

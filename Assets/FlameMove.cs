@@ -8,7 +8,7 @@ public class FlameMove : MonoBehaviour
     int count;
     private void Update()
     {
-        transform.position += Vector3.left * speed;
+        transform.position += Vector3.left * speed * Time.deltaTime;
         if (count > 10000)
         {
             Destroy(gameObject);

@@ -26,7 +26,7 @@ public class BossMove : MonoBehaviour
     private void Update()
     {
         rand = (Random.value - direction);
-        rand2 = Random.value * 0.1f;
-        transform.position += new Vector3(rand * speed, rand2, 0);
+        rand2 = Random.value * 20;
+        transform.position += new Vector3(rand * speed * Time.deltaTime, rand2 * Time.deltaTime, 0);
     }
 }

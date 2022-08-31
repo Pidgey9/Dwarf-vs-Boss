@@ -52,7 +52,7 @@ public class PTwoMove : MonoBehaviour
             if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Z)) && jumpCount.value == 0)
             {
                 //rb.AddForce(Vector2.up * jump);
-                cf.force = Vector2.up * jump;
+                cf.force = Vector2.up * jump * Time.deltaTime;
                 jumpCount.value++;
                 animator.SetTrigger("Jump");
             }

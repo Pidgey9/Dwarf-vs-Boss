@@ -19,4 +19,11 @@ public class JumpManager : MonoBehaviour
             jumpCount.value = 0;
         }
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Jump"))
+        {
+            jumpCount.value++;
+        }
+    }
 }

@@ -2770,6 +2770,10 @@ PrefabInstance:
       propertyPath: mobilePlatform
       value: 
       objectReference: {fileID: 1236268249}
+    - target: {fileID: 331715321288283558, guid: edf648fe7fabcde4f8c104e12d8e2a87, type: 3}
+      propertyPath: speed
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 331715321288283559, guid: edf648fe7fabcde4f8c104e12d8e2a87, type: 3}
       propertyPath: m_Name
       value: Boss

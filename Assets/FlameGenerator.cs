@@ -8,7 +8,7 @@ public class FlameGenerator : MonoBehaviour
     public int count;
     private void Update()
     {
-        if (count % 1000 == 0)
+        if (count % 500 == 0)
         {
             Vector3 spawn = transform.position;
             spawn.y += Random.value * 10;
